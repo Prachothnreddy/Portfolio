@@ -1,0 +1,152 @@
+div{
+    background-color:lightcoral;
+}
+h1 {
+    color: black;
+    text-align: center;font-family:algerian;
+}
+
+/* Spaces */
+
+.margin-md{
+    margin: 2rem;
+}
+
+/* Container */
+.container {
+    text-align: right;
+    padding: 0rem 1rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+}
+
+.container-fluid {
+    max-width: 650px;
+    margin: auto;
+}
+
+.container-center {
+    max-width: 650px;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+/* Links */
+
+.link{
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    color:blue;
+
+}
+
+
+.link-primary {
+    text-decoration: none;
+    color: blue;
+    border-radius: 00.5rem;
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.link-secondary {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    color: blue;
+    padding: 0.5rem 1rem;
+}
+
+/* Navigation */
+
+.navigation {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.navigation .link {
+    color: blue;
+}
+
+
+.navigation .nav-brand {
+    font-weight: bold;
+
+}
+
+.navigation .nav-pills {
+    text-align: right;
+}
+
+
+/* header */
+
+.hero {
+    padding: 2rem;
+    padding-top: 5rem;
+
+}
+
+
+.hero .hero-img {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+.hero .hero-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #6B7280;
+}
+
+.hero .hero-heading .headingg {
+    color: var(--primary-color);
+}
+
+/* Sections */
+
+.section h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.ow {
+    background-color: var(--off-white);
+    padding-bottom: 2rem;
+
+}
+
+.centers {
+    min-width: 600px;
+    margin: auto;
+}
+
+/* footers */
+.footer{
+    background-color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    color:blue;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.footer{
+    color:blue;
+}
+
+.footer .footer-header{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.size{
+    font-size:2.5rem;
+}

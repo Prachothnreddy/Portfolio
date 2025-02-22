@@ -1,0 +1,22 @@
+<style>
+body{
+    background-color:aquamarine;font-color:white;
+    }
+    
+h1{
+    color: purple;
+    text-align: center;font-family:algerian;
+}
+h4{
+   color:maroon;
+font-size:20px;font-family:arial;
+}
+#borders{
+    border-style:dashed;
+    background-color:skyblue;
+    color:darkslateblue;
+    text-indent:30px;
+    margin:10px;
+    font-family:Times New Roman;
+    }
+</style>

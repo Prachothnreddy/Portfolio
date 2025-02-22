@@ -1,0 +1,223 @@
+<html>
+
+<head>
+
+ <title>
+
+ A Sample Tutorial for database connection.
+
+ </title>
+
+</head>
+
+<body bgcolor="#32e692">
+
+ <div align="center">
+
+ <!--<h1>Details Entry Form</h1>-->
+
+ </div>
+
+<form action="details_entry.php" method="post">
+
+ <table border="1" align="center">
+
+ <tr>
+
+  <td>
+
+  <label>Enter First Name</label></td>
+
+  <td><input type="text" name="first_name"></td>
+
+ </tr>
+
+ <tr>
+
+  <td>
+
+  <label>Enter Last Name</label></td>
+
+  <td><input type="text" name="last_name"></td>
+
+ </tr>
+
+ <tr>
+
+  <td>
+
+  <label>Gender</label></td>
+
+  <td><input type="radio" name="gender" value="male">Male
+
+  <input type="radio" name="gender" value="female">Female</td>
+
+ </tr>
+
+ <tr>
+
+  <td>
+
+  <label>Enter Email</label></td>
+
+  <td><input type="email" name="email"></td>
+
+ </tr>
+
+ <tr>
+
+  <td>
+
+  <label>Enter Phone</label></td>
+
+  <td><input type="phone" name="phone"></td>
+
+ </tr>
+
+ <tr>
+
+  <td colspan="2" align="center" ><input type="submit" name="save" value="Submit" style="font-size:20px"></td>
+
+ </tr>
+
+ </table>
+
+</form>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+PHP Code:
+
+<?php
+
+
+
+$server_name=”localhost”;
+
+$username=”root”;
+
+$password=””;
+
+$database_name=”database123″;
+
+
+
+
+
+$conn=mysqli_connect($server_name,$username,$password,$database_name);
+
+//now check the connection
+
+
+
+if(!$conn)
+
+{die("Connection Failed:" . mysqli_connect_error());}
+
+
+
+if(isset($_POST['save']))
+
+{
+
+$first_name = $_POST['first_name'];
+
+$last_name = $_POST['last_name'];
+
+$gender = $_POST['gender'];
+
+$email = $_POST['email'];
+
+$phone = $_POST['phone'];
+
+
+
+//For inserting the values to mysql database
+
+$sql_query = "INSERT INTO entry_details (first_name,last_name,gender,email,mobile)
+
+VALUES ('$first_name','$last_name','$gender','$email','$phone')";
+
+
+
+if (mysqli_query($conn, $sql_query))
+
+{
+
+echo "New Details Entry inserted successfully !";
+
+}
+
+
+
+//Full Code of php file for mySql database connection with html form
+
+<?php
+
+$server_name="localhost";
+
+$username="root";
+
+$password="";
+
+$database_name="database123";
+
+$conn=mysqli_connect($server_name,$username,$password,$database_name);
+
+//now check the connection
+
+if(!$conn)
+
+{
+
+ die("Connection Failed:" . mysqli_connect_error());
+
+}
+
+if(isset($_POST['save']))
+
+{
+
+ $first_name = $_POST['first_name'];
+
+ $last_name = $_POST['last_name'];
+
+ $gender = $_POST['gender'];
+
+ $email = $_POST['email'];
+
+ $phone = $_POST['phone'];
+
+ $sql_query = "INSERT INTO entry_details (first_name,last_name,gender,email,mobile)
+
+ VALUES ('$first_name','$last_name','$gender','$email','$phone')";
+
+ if (mysqli_query($conn, $sql_query))
+
+ {
+
+ echo "New Details Entry inserted successfully !";
+
+ }
+
+ else
+
+   {
+
+ echo "Error: " . $sql . "" . mysqli_error($conn);
+
+ }
+
+ mysqli_close($conn);
+
+}
+
+?>
